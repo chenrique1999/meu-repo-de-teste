@@ -47,12 +47,14 @@ npm run format
 
 - GET /health -> retorna `{"status":"ok"}`
 - GET /version -> retorna `{"version":"1.0.0"}`
+- GET /status -> retorna `{"ok":true}`
 
 ## cURL Exemplos
 
 ```
 curl -s http://localhost:3000/health
 curl -s http://localhost:3000/version
+curl -s http://localhost:3000/status
 ```
 
 ## Docker
