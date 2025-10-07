@@ -12,9 +12,10 @@ app.get('/status', (req, res) => {
   res.status(200).json({ ok: true });
 });
 
-// Rota /version
+// Rota /version - lê dinamicamente do package.json em tempo de execução
 app.get('/version', (req, res) => {
-  res.status(200).json({ version: '1.0.0' });
+  const { version } = require('./package.json');
+  res.status(200).json({ version });
 });
 
 // Inicia o servidor apenas quando este arquivo é o principal (não em testes)
