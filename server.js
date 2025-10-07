@@ -7,6 +7,11 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });
 
+// Nova rota /version conforme solicitado
+app.get('/version', (req, res) => {
+  res.status(200).json({ version: '1.0.0' });
+});
+
 const server = app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
