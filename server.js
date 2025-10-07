@@ -7,7 +7,12 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });
 
-// Nova rota /version conforme solicitado
+// Rota /status solicitada: retorna { ok: true }
+app.get('/status', (req, res) => {
+  res.status(200).json({ ok: true });
+});
+
+// Nova rota /version conforme solicitado anteriormente
 app.get('/version', (req, res) => {
   res.status(200).json({ version: '1.0.0' });
 });
